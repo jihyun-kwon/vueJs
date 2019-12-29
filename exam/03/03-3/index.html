@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Component Registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button>전역 컴포넌트 등록</button>
+        <my-global-component></my-global-component><!--전역 컴포넌트표시 !-->
+        <my-local-component></my-local-component><!--지역 컴포넌트표시 !-->
+    </div><hr>
+    <div id="app2">
+        <button>지역 컴포넌트 등록</button>
+        <my-global-component></my-global-component><!--전역 컴포넌트표시 !-->
+        <my-local-component></my-local-component><!--지역 컴포넌트표시되지 않는다 !-->
+    </div>
+
+    <script>/*전역 컴포넌트 등록할떄는 Vue.component */
+        Vue.component('my-global-component', {
+           template: '<div>전역 컴포넌트가 등록되었습니다</div>'
+        });
+        /*지역 컴포넌트 등록할때는 new Vue({...components: 태그명:template: */
+        var cmp = {
+            //컴포넌트 내용
+            template: '<div>지역 컴포넌트가 등록되었습니다</div>'
+        }
+        new Vue({
+           el: '#app',  //이-원이 아니라 이-엘이다...!
+           components: {
+               'my-local-component': cmp
+           }
+        });
+        new Vue({
+            el: '#app2'
+        });
+    </script>
+</body>
+</html>
