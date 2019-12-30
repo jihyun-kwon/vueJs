@@ -10,8 +10,11 @@
 <app-header v-bind:프롭스속성이름="상위컴포넌트 데이터이름">
 (props.html 참조)
 
-뷰라우터 : 싱글페이지 에플리케이션을 이용하여 구현한 라우터
+* 뷰라우터 : 싱글페이지 에플리케이션을 이용하여 구현한 라우터
 new VueRouter({...});
 
+* Axios : promise 기반의 http 통신 라이브러리
+
+(통상적 웹 흐름 : 1. HttpRequest->2.backend logic -> 3.db 호출 ->4. db응답 -> 5.백엔드로직-> 6. HttpResponse)
 
 
