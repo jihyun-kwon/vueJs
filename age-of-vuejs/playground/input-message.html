@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data binding with input tag</title>
+</head>
+<body>
+
+<input v-model="message" type="text" id="app" placeholder="edit me">
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+<script>
+    var appHeader = {
+        template: "<p>{{ message }}</p>"
+    }
+    new Vue({
+        el: "#app",
+        components: {   //컴포넌트를 사용해서 input이 달라질때 message도 변화하도록 하자
+            "appHeader": appHeader
+        },
+        data: {
+            message: ""
+        }
+    })
+</script>
+</body>
+</html>

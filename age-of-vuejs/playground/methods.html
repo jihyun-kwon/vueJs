@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="logText">click me</button>
+    <input type="text" v-on:keyup.enter="logText"> <!--.은 이벤트모디파이어-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+            //키보드, 마우스 등 이벤트 조작하는 건 methods: { ... }
+            logText: function(){
+                console.log('clicked or keyuped');
+            }
+        }
+    })
+</script>
+</body>
+</html>

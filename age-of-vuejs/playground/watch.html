@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WATCH</title>
+</head>
+<body>
+<div id="app">
+    {{ num }}
+    <button v-on:click="addNum">increase</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            num: 0
+        },
+        watch: {    //data의 변화에 따라서 특정로직을 실행할 수 있다
+          num: function(){ //num이란 속성이 바뀔때마다 logText가 실행된다!!
+              this.logText();
+          } //1. addnum() -> watch num 변경 -> logText실행
+        },
+        methods: {
+            addNum: function(){
+                this.num = this.num + 1;
+            },
+            logText: function(){
+                console.log('changed');
+            }
+        }
+    })
+</script>
+</body>
+</html>

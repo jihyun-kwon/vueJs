@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data binding with input tag</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="message" type="text" placeholder="edit me">
+    <p>{{ message }}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "" //컴포넌트를 통하지않고 곧바로 mustache 문법을 html p태그에 적용한 경우
+        }
+    })
+</script>
+</body>
+</html>

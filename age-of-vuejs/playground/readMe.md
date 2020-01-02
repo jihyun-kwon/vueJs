@@ -17,4 +17,4 @@ new VueRouter({...});
 
 (통상적 웹 흐름 : 1. HttpRequest->2.backend logic -> 3.db 호출 ->4. db응답 -> 5.백엔드로직-> 6. HttpResponse)
 
-
+* vuejs.org : 라이브러리. 모르는 문법은 검색해서 사용하기
