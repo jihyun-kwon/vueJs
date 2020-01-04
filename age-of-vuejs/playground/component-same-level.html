@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component same level</title>
+</head>
+<body>
+<div id="app">
+    <app-header v-bind:propsData="num"></app-header>
+    <app-content v-on:pass="deliverNum"></app-content>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+<script>
+    //emit으로 data 올리고 props로 내려서 같은레벨에서 컴포넌트 통신을 할 수 있다
+    var appHeader = {
+        template: '<div>HEADER</div>',
+        props: ['propsData']
+    }
+    var appContent = {
+        template: '<div><button v-on:click="passNum">pass</button></div>',
+        methods: {
+            passNum: function () {
+                this.$emit('pass', 10); //payload 인자가 10이 같이 넘어감
+            }
+        }
+    }
+    new Vue({
+        el: '#app',
+        components: {
+            'app-header': appHeader,
+            'app-content': appContent
+        },
+        data: {
+            num: 0
+        },
+        methods: {
+            deliverNum: function(value){
+                this.num = value;   //data의 num으로 값 이동
+            }
+        }
+    })
+</script>
+</body>
+</html>
