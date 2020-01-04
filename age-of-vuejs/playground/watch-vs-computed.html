@@ -25,6 +25,7 @@
         watch: {
             num: function(newValue, oldValue){  //변화를 추적하는 watch. 데이터 요청에 자주쓰임
                 this.fetchUserByNumber(newValue);
+                console.log(oldValue + 314);
             }
         },
         methods: {
