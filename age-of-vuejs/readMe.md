@@ -17,4 +17,12 @@ new VueRouter({...});
 
 (통상적 웹 흐름 : 1. HttpRequest->2.backend logic -> 3.db 호출 ->4. db응답 -> 5.백엔드로직-> 6. HttpResponse)
 
-* vuejs.org : 라이브러리. 모르는 문법은 검색해서 사용하기
+* https://www.vuejs.org : 라이브러리. 모르는 문법은 검색해서 사용하기
+
+* VUE CLI 설치 : node -v > v12, npm -v > v6, npm i -g @vue/cli
+* VUE CLI v3 =/= v2
+* vue create '프로젝트폴더 위치' (ex. vue create vue-cli)
+
+* npm run serve === vue-cli-service serve
+* npm : node package manager. package.json의 library 등을 설명한다
+
