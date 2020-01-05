@@ -27,7 +27,7 @@
 <style>
   body {
     text-align: center;
-    background-color: #fbdddd;
+    background-color: whitesmoke;
   }
   input {
     border-style: groove;

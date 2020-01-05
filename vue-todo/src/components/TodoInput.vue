@@ -1,6 +1,6 @@
 <template>
   <div class="inputBox shadow">
-    <input type="text" v-model="newTodoItem" placeholder="Type waht you have to do"
+    <input type="text" v-model="newTodoItem" placeholder="Type want you have to do"
     v-on:keyup.enter="addTodo">
     <span class="addContainer" v-on:click="addTodo">
       <i class="addBtn fa fa-plus" aria-hidden="true"></i>
@@ -35,7 +35,6 @@
     outline: none;
   }
   .inputBox {
-    background: aliceblue;
     height: 50px;
     line-height: 50px;
     border-radius: 5px;
