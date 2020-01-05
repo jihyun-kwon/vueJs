@@ -1,7 +1,3 @@
-# vue-todo
-
-> A Vue.js project
-
 ## Build Setup
 
 ``` bash
@@ -15,4 +11,8 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+* 각각의 components 설명
+todoHedaer : 애플리케이션 이름표시
+todoInput : 할일 입력 및 추가
+todoList:  할일 목록 표시 및 특정할일 삭제
+todoFooter : 할일 모두 삭제
