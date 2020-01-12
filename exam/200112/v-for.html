@@ -6,14 +6,16 @@
   </head>
   <body>
     <div id='app'>
-      {{ message }}
+      <div v-for="item in list">
+      {{ item }}
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
     <script type="text/javascript">
       new Vue({
         el: '#app',
         data: {
-          message: 'Hello Vue.js!'
+          list: ['파인애플', '사과', '애플망고']
         }
       })
     </script>

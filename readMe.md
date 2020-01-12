@@ -27,3 +27,6 @@ new VueRouter({...});
 * npm run serve === vue-cli-service serve
 * npm : node package manager. package.json의 library 등을 설명한다
 
+* 디렉티브 : v-로 시작하는 vue 리스너
+v-for : 반복 렌더링/ v-model : 양방향 데이터 바인딩 / v-on : 이벤트 리스너 디렉티브 
+
