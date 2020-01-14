@@ -12,19 +12,11 @@
 
 *같은레벨간의 컴포넌트 데이터 전달 : 하위컴포넌트1 : emit data -> root컴포넌트 : data 받아서 props data -> 하위컴포넌트2 data 전달받음 
 
-* 뷰라우터 : 싱글페이지 에플리케이션을 이용하여 구현한 라우터
-new VueRouter({...});
-
 * Axios : promise 기반의 http 통신 라이브러리
 (통상적 웹 흐름 : 1. HttpRequest->2.backend logic -> 3.db 호출 ->4. db응답 -> 5.백엔드로직-> 6. HttpResponse)
 
 * https://www.vuejs.org : 라이브러리. 모르는 문법은 검색해서 사용하기
 
-* VUE CLI 설치 : node -v > v12, npm -v > v6, npm i -g @vue/cli
-* VUE CLI v3 =/= v2
-* vue create '프로젝트폴더 위치' (ex. vue create vue-cli)
-
-* npm run serve === vue-cli-service serve
 * npm : node package manager. package.json의 library 등을 설명한다
 
 * 디렉티브 : v-로 시작하는 vue 리스너
